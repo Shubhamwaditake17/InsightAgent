@@ -1,0 +1,6 @@
+.env
+data/sales.db
+charts/
+logs/
+__pycache__/
+.pytest_cache/

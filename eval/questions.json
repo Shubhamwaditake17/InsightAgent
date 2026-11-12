@@ -1,0 +1,110 @@
+[
+ {
+  "question": "What was the total revenue for the North region?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'North'"
+ },
+ {
+  "question": "What was the total revenue for the South region?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'South'"
+ },
+ {
+  "question": "What was the total revenue for the East region?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'East'"
+ },
+ {
+  "question": "What was the total revenue for the West region?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'West'"
+ },
+ {
+  "question": "How many units of product A were sold in total?",
+  "gold_sql": "SELECT SUM(units) AS total_units FROM sales WHERE product = 'A'"
+ },
+ {
+  "question": "How many units of product B were sold in total?",
+  "gold_sql": "SELECT SUM(units) AS total_units FROM sales WHERE product = 'B'"
+ },
+ {
+  "question": "How many units of product C were sold in total?",
+  "gold_sql": "SELECT SUM(units) AS total_units FROM sales WHERE product = 'C'"
+ },
+ {
+  "question": "What was the total revenue in 2025-03?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE month = '2025-03'"
+ },
+ {
+  "question": "What was the total revenue in 2025-06?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE month = '2025-06'"
+ },
+ {
+  "question": "What was the total revenue in 2025-09?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE month = '2025-09'"
+ },
+ {
+  "question": "What was the total revenue in 2025-11?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE month = '2025-11'"
+ },
+ {
+  "question": "What was the total revenue in 2025-12?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE month = '2025-12'"
+ },
+ {
+  "question": "What was the West region's revenue in 2025-10?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'West' AND month = '2025-10'"
+ },
+ {
+  "question": "What was the West region's revenue in 2025-11?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'West' AND month = '2025-11'"
+ },
+ {
+  "question": "What was the West region's revenue in 2025-12?",
+  "gold_sql": "SELECT SUM(revenue) AS total_revenue FROM sales WHERE region = 'West' AND month = '2025-12'"
+ },
+ {
+  "question": "Which region had the highest total revenue overall?",
+  "gold_sql": "SELECT region, SUM(revenue) AS r FROM sales GROUP BY region ORDER BY r DESC LIMIT 1"
+ },
+ {
+  "question": "Which region had the lowest total revenue overall?",
+  "gold_sql": "SELECT region, SUM(revenue) AS r FROM sales GROUP BY region ORDER BY r ASC LIMIT 1"
+ },
+ {
+  "question": "Which product earned the most revenue overall?",
+  "gold_sql": "SELECT product, SUM(revenue) AS r FROM sales GROUP BY product ORDER BY r DESC LIMIT 1"
+ },
+ {
+  "question": "Which month had the highest total revenue?",
+  "gold_sql": "SELECT month, SUM(revenue) AS r FROM sales GROUP BY month ORDER BY r DESC LIMIT 1"
+ },
+ {
+  "question": "Which month had the lowest total revenue?",
+  "gold_sql": "SELECT month, SUM(revenue) AS r FROM sales GROUP BY month ORDER BY r ASC LIMIT 1"
+ },
+ {
+  "question": "Which region sold the most units in 2025-12?",
+  "gold_sql": "SELECT region, SUM(units) AS u FROM sales WHERE month = '2025-12' GROUP BY region ORDER BY u DESC LIMIT 1"
+ },
+ {
+  "question": "What is the average units sold per row in the North region?",
+  "gold_sql": "SELECT AVG(units) AS avg_units FROM sales WHERE region = 'North'"
+ },
+ {
+  "question": "What was the West region's total revenue in Q4 (2025-10 to 2025-12)?",
+  "gold_sql": "SELECT SUM(revenue) AS r FROM sales WHERE region = 'West' AND month >= '2025-10'"
+ },
+ {
+  "question": "What was the West region's total revenue in Q3 (2025-07 to 2025-09)?",
+  "gold_sql": "SELECT SUM(revenue) AS r FROM sales WHERE region = 'West' AND month BETWEEN '2025-07' AND '2025-09'"
+ },
+ {
+  "question": "What was product B's total revenue in the South region?",
+  "gold_sql": "SELECT SUM(revenue) AS r FROM sales WHERE product = 'B' AND region = 'South'"
+ },
+ {
+  "question": "How many rows are in the sales table?",
+  "gold_sql": "SELECT COUNT(*) AS n FROM sales"
+ },
+ {
+  "question": "What are the top 3 months by total revenue?",
+  "gold_sql": "SELECT month, SUM(revenue) AS r FROM sales GROUP BY month ORDER BY r DESC LIMIT 3"
+ }
+]
