@@ -20,8 +20,6 @@ Or: `docker build -t insightagent . && docker run -p 8000:8000 -e GROQ_API_KEY=.
 - `prompts/`: versioned planner prompts; `eval/run_eval.py` scores each against gold SQL results.
 - Add a tool by subclassing `BaseTool`; the agent code does not change.
 
-## Experiments log
-Record each prompt version and its eval score here, plus failure cases and fixes.
 
 ## Observability and evaluation
 - Every request returns `metrics` (total latency, LLM/tool call counts, approximate tokens) and is appended to `logs/traces.jsonl`.
